@@ -1,0 +1,75 @@
+
+import './App.css';
+import ParentComponent from './components/parentComponent';
+
+function App() {
+  return (
+    <div className="App">
+     <ParentComponent />
+    </div>  
+  );
+}
+
+export default App;
+
+
+//Parent Component
+
+import React, { Component } from 'react'
+import ChildComponent from "./childComponent";
+
+export class parentComponent extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             message : "Parent"
+        }
+        this.greetParent=this.greetParent.bind(this)
+    }
+    greetParent=(childName)=>{
+        alert(`Hi ${this.state.message} from ${childName}`)
+        console.log("HI Parent")
+    }
+    render() {
+        return (
+            <div>
+                <ChildComponent greetHandler = {this.greetParent} />
+            </div>
+        )
+    }
+}
+
+export default parentComponent
+
+
+//childComponent
+import React, { Component } from 'react'
+import ChildComponent from "./childComponent";
+
+export class parentComponent extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             message : "Parent"
+        }
+        this.greetParent=this.greetParent.bind(this)
+    }
+    greetParent=(childName)=>{
+        alert(`Hi ${this.state.message} from ${childName}`)
+        console.log("HI Parent")
+    }
+    render() {
+        return (
+            <div>
+                <ChildComponent greetHandler = {this.greetParent} />
+            </div>
+        )
+    }
+}
+
+export default parentComponent
+
+
+

@@ -1,0 +1,34 @@
+import React from 'react'
+
+function functionHandler() {
+    function clickHandle(){
+        console.log("Hi, I was clicked")
+    }
+    return (
+        <div>
+            <button onClick={clickHandle}>Click</button>
+        </div>
+    )
+}
+
+export default functionHandler
+
+
+
+import React, { Component } from 'react'
+
+ class classHandler extends Component {
+     eventHandler(){
+         console.log("Class handler Clicked")
+     }
+    render() {
+        return (
+            <div>
+               <button onClick={this.eventHandler}>ClassClick</button> 
+            </div>
+        )
+    }
+}
+
+export default classHandler
+
