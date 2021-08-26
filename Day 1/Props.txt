@@ -1,0 +1,67 @@
+Props are properties that we can pass to a component and make the component render it .
+Props are immutable.
+example - 
+
+//    app.js
+
+import logo from './logo.svg';
+import './App.css';
+import Greet from './components/greet'
+import GreetClass from './components/greetClass'
+function App() {
+  return (
+    //function component
+    <div>
+    <Greet name="Ujwal" >
+    <p>This is child component</p> 
+    </ Greet >
+
+    
+    <GreetClass name="Ujwal"/>
+    </div>
+  );
+}
+
+export default App;
+
+
+//   Greet.js
+
+// props in function component
+import React from 'react'
+
+function greet(props) {
+    return (
+        <div>
+            <h1>Hello {props.name}</h1>
+            {props.children}
+        </div>
+    )
+}
+
+export default greet
+
+
+//   greetClass
+
+import React, { Component } from 'react'
+//props in class component
+ class greetClass extends Component {
+    render() {
+        return (
+            <div>
+            <h1>Hello {this.props.name} from class component</h1>                
+            </div>
+        )
+    }
+}
+
+export default greetClass
+ 
+
+
+- In class component props are used as {this.props.NAMEOFATTRIBUTE}
+- In functional component props are used as {props.NAMEOFATTRIBUTE}
+- props are immutable 
+
+

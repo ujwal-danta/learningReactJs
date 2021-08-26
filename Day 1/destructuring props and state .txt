@@ -1,0 +1,58 @@
+Destructuring props and state
+- By destructuring props and state we can use props.name as name and this.state.name as name.
+ 
+//function component
+
+
+// destructuring props and state
+// method 1
+// import React from 'react'
+
+// const greet = ({name})=> {
+//     return (
+//         <div>
+//             <h1>hello {name}</h1>
+//         </div>
+//     )
+// }
+
+// export default greet
+
+
+// method 2
+import React from 'react'
+
+const greet=(props)=>{
+    const {name} = props 
+    return (
+        <div>
+            <h1>HI {name}</h1>
+        </div>
+    )
+}
+
+export default greet
+
+
+
+
+
+//class component
+
+
+import React, { Component } from 'react'
+
+export class greetClass extends Component {
+    render() {
+        const{name} = this.props
+        //const{state1,state2} = this.state
+        return (
+            <div>
+                <h1>hi {name}</h1>
+            </div>
+        )
+    }
+}
+
+export default greetClass
+

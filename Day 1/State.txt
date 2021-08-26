@@ -1,0 +1,54 @@
+state
+-Same as props but they are mutable .
+-declared inside this.state in class component(inside the constructor) and its value can be modified using 
+this.setState({value to be changed as key-value pair})
+
+Example :-
+
+
+//app.js
+
+import logo from './logo.svg';
+import './App.css';
+import Greet from './components/greet'
+import GreetClass from './components/greetClass'
+import Classstate from './components/classstate';
+function App() {
+  return (   
+    <Classstate />
+  );
+}
+
+export default App;
+
+
+//classstate.js
+//state in class component
+
+import React, { Component } from 'react'
+ class classstate extends Component {
+     constructor(props) {
+         super(props)
+     
+         this.state = {
+              message: 'Welcome Subscriber'
+         }
+     }
+     changeMessage(){
+         this.setState({
+             message: 'ThankYou for subscribing'
+         })
+     }
+     
+    render() {
+        return (
+            <div>
+                <h1> {this.state.message}</h1>
+                <button onClick={()=>this.changeMessage()}>subscribe</button>
+            </div>
+        )
+    }
+}
+
+export default classstate
+ 
