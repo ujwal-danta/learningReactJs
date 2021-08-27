@@ -1,0 +1,58 @@
+// import React, { Component } from 'react'
+
+//  class userGreeting extends Component {
+//      constructor(props) {
+//          super(props)
+     
+//          this.state = {
+//               isLoggedin : true
+//          }
+//      }
+     
+//     render() {
+//             if(this.state.isLoggedin)
+//             {
+//               return    <div>Hello Ujwal</div>
+//             }
+//             else
+//             {
+//              return     <div>Hello User</div>
+//             }
+        
+//     }
+// }
+
+// export default userGreeting
+
+import React, { Component } from 'react'
+
+ class userGreeting extends Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             isLoggedin: true
+        }
+    }
+    
+    render() {
+     return this.state.isLoggedin? <div>Hello Ujwal</div> : <div>Hello User</div>     // prefered method
+      
+
+    // return this.state.isLoggedin && <div>Hello Ujwal</div>
+
+
+
+        // let message
+        // if(this.state.isLoggedin)
+        // message = <div><h1>Hello Ujwal</h1></div>
+        // else
+        // message= <div><h1>Hello User</h1></div>
+        // return (
+        //     <div>
+        //         {message}
+        //     </div>
+        // )
+    }
+}
+export default userGreeting
