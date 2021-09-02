@@ -1,0 +1,44 @@
+
+import React from 'react'
+
+function FragmentDemo() {
+	return (
+		<React.Fragment>
+			<h1>Fragment Demo</h1>
+			<p>This describes the Fragment Demo component</p>
+		</React.Fragment>
+	)
+}
+
+export default FragmentDemo
+
+
+import React from 'react'
+import Columns from './Columns'
+
+function Table() {
+	return (
+		<table>
+			<tbody>
+				<tr>
+					<Columns />
+				</tr>
+			</tbody>
+		</table>
+	)
+}
+
+export default Table
+
+import React from 'react'
+
+function Columns() {
+  return (
+    <React.Fragment>
+      <td>Name</td>
+      <td>Vishwas</td>
+    </React.Fragment>
+  )
+}
+
+export default Columns

@@ -1,0 +1,26 @@
+import logo from './logo.svg';
+import './App.css';
+import Form from './components/Form'
+import RefsDemo from './components/RefsDemo'
+import ParentRef from './components/parentRef'
+import Parent from './components/forwardRefParent'
+import PortalDemo from './components/portalDemo'
+import Hero from './components/hero'
+import ErrorBoundry from './components/errorBoundry'
+function App() {
+  return (
+    <>
+    <ErrorBoundry>
+   <Hero heroname="BatMan"/>
+   </ErrorBoundry>
+   <ErrorBoundry>
+   <Hero heroname="SpiderMan" />
+   </ErrorBoundry>
+   <ErrorBoundry>
+   <Hero heroname="Joker" />
+   </ErrorBoundry>
+   </>
+  );
+}
+
+export default App;
